@@ -75,7 +75,7 @@ body{
     "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: var(--font-size);
     line-height: 1.25;
-    font-weight: normal;
+    font-weight: 400;
     position: relative;
     min-height: 100%;
     display: flex;
@@ -427,16 +427,16 @@ a.personal-area__leftblock-bottom.active svg{
 /* Personal Area-content */
 .personal-area__content{
     width: 100%;
-    padding-left: 280px;
+    padding-left: 260px;
     height: calc(100vh - 40px);
-    overflow-Y: scroll;
+    gap: 5px;
+    overflow-Y: auto;
 }
 .personal-area__content__heading{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     width: 100%;
-    padding: 20px 20px 10px 20px;
+    padding: 20px 30px 10px 30px;
 }
 .personal-area__content__heading h1{
     font-size: 36px;
@@ -469,6 +469,9 @@ table.table-link tr:nth-child(even) {
 table.table-link tr:hover{
     background: var(--primary-100);
 }
+svg.icon-review{
+    stroke: var(--primary-700);
+}
 .status-archive{
     color: var(--gray-400);
 }
@@ -478,5 +481,51 @@ table.table-link tr:hover{
 .status-archive a.link{
     color: var(--gray-400);
 }
+.status-archive svg.icon-review{
+    stroke: var(--gray-400);
+}
+
+/* bread-crumbs */
+ul.bread-crumbs{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+ul.bread-crumbs li{
+    position: relative;
+    padding-left: 28px;
+}
+ul.bread-crumbs li a{
+    font-weight: normal;
+}
+ul.bread-crumbs li a:hover{
+    color: var(--primary-700);
+}
+ul.bread-crumbs li:first-child{
+    padding-left: 0;
+}
+ul.bread-crumbs li::before{
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 3px;
+    left: 0;
+    background: url('../img/icon-breadcrumbs.svg') center no-repeat;
+}
+ul.bread-crumbs li:first-child:before{
+    display: none;
+}
+.end-application{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.personal-area__content__text{
+    margin-top: 10px;
+    padding: 20px;
+    border-top: 1px solid var(--gray-200);
+}
+/* bread-crumbs */
 /* Personal Area-content */
 /* Personal Area */
