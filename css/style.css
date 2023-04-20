@@ -243,7 +243,7 @@ label{
 .textfrom{
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 10px;
 }
 .textfrom img{
     width: 30px;
@@ -266,10 +266,25 @@ label{
     justify-content: center;
     font-size: 18px;
 }
+.button-primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:  8px 24px;
+    background-color: var(--primary-700);
+    color: var(--white);
+    border-radius: var(--br);
+    font-weight: 600;
+}
+.button-primary:hover{
+    background-color: var(--primary-500);
+    color: var(--white);
+}
 .button-secondary__big{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     text-align: center;
     padding: 16px 30px;
     border-radius: var(--br);
@@ -564,7 +579,7 @@ ul.bread-crumbs li:first-child:before{
     color: var(--gray-400);
 }
 .personal-area__content__text-wrapper{
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .all-botton-left{
     width: 100%;
@@ -575,4 +590,48 @@ ul.bread-crumbs li:first-child:before{
     border-top: 1px solid var(--gray-200);
 }
 /* Personal Area-content */
+/* question-answer */
+.question-answer{
+    padding: 0 30px;
+    margin-top: 30px;
+}
+.question-answer__heading{
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--gray-200);
+}
+.question-answer__item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.question-answer__item-content{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.question-answer__item-content img{
+    width: 60px;
+    height: auto;
+    border-radius: 50%;
+}
+.question-answer__item-info__top{
+    display: flex;
+    align-items: flex-end;
+    gap: 10px;
+}
+.question-answer__item-info{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+.question-answer__item-name{
+    font-weight: 600;
+}
+.question-answer__item-button{
+    display: flex;
+    align-items: flex-end;
+    
+}
+/* question-answer */
 /* Personal Area */
