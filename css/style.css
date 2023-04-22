@@ -273,7 +273,7 @@ label{
     font-size: 18px;
 }
 .button-primary{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -291,10 +291,11 @@ label{
     color: var(--white);
 }
 .button-secondary{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    gap: 10px;
     height: 40px;
     padding:  8px 24px;
     border: 1px solid var(--gray-300);
@@ -309,7 +310,7 @@ label{
     border-color: var(--gray-400);
 }
 .button-secondary__big{
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -761,7 +762,63 @@ ul.all-operations__item-list li:hover{
     width: 120px;
     display: block;
 }
+.all-operations__item-list__name a{
+    display: block;
+    width: calc(100% - 140px);
+}
 .textgreen{
     color: var(--success-500);
+}
+svg.icon-edit{
+    width: 18px;
+    height: 18px;
+    fill: transparent;
+}
+.personal-area__content-edit{
+    padding: 10px 10px 10px 30px;
+    background-color: var(--gray-50);
+}
+.personal-area__profile{
+    border-top: 1px solid var(--gray-200);
+    padding: 20px 30px;
+}
+.personal-area__profile-introduction{
+    display: flex;
+    gap: 30px;
+    font-size: 18px;
+}
+.personal-area__profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: var(--br);
+}
+.personal-area__profile-wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.personal-area__profile-info-list{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.personal-area__profile-info-list__item h5{
+    margin-bottom: 15px;
+}
+.personal-area__profile-info-list__item-block{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.personal-area__profile-info-list__item-text{
+    display: flex;
+    gap: 20px;
+}
+.personal-area__profile-info-list__item-text__heading{
+    color: var(--gray-400);
+    width: 220px;
+}
+.personal-area__profile-info-list__item-text__content{
+    width: calc(100% - 240px);
 }
 /* Personal Area */
