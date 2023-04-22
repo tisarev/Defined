@@ -277,11 +277,14 @@ label{
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 40px;
     padding:  8px 24px;
     background-color: var(--primary-700);
     color: var(--white);
     border-radius: var(--br);
     font-weight: 600;
+    border: none;
+    cursor: pointer;
 }
 .button-primary:hover{
     background-color: var(--primary-500);
@@ -292,12 +295,14 @@ label{
     align-items: center;
     justify-content: center;
     text-align: center;
+    height: 40px;
     padding:  8px 24px;
     border: 1px solid var(--gray-300);
     color: var(--primary-700);
     background-color: var(--white);
     border-radius: var(--br);
     font-weight: 600;
+    cursor: pointer;
 }
 .button-secondary:hover{
     background-color: var(--gray-50);
@@ -317,6 +322,21 @@ label{
 .button-secondary__big:hover{
     background-color: var(--gray-50);
     border-color: var(--gray-400);
+}
+select{
+    height: 40px;
+    border-radius: var(--br);
+    border: 1px solid var(--gray-400);
+    -webkit-appearance: none;
+    background: url('../img/icon-select.svg') right 10px center no-repeat;
+    padding-left: 15px;
+    padding-right: 36px;
+}
+select:hover{
+    border-color: var(--gray-500);
+}
+select:focus{
+    background: url('../img/icon-select__focus.svg') right 10px center no-repeat;
 }
 /* settings */
 /* Personal Area */
@@ -527,6 +547,10 @@ table.table-link tr:nth-child(even) {
 table.table-link tr:hover{
     background: var(--primary-100);
 }
+table.table-link tr.status-archive:hover{
+    background: var(--gray-200);
+}
+
 svg.icon-review{
     stroke: var(--primary-700);
 }
@@ -681,4 +705,63 @@ ul.list-tabs li.active a{
     color: var(--primary-700);
 }
 /* tabs */
+svg.icon-everyone-counts{
+    fill: transparent;
+    width: 24px;
+    height: 24px;
+    stroke: var(--primary-700);
+}
+svg.icon-everyone-counts:hover{
+    stroke: var(--secondary-700);
+}
+.personal-area__content__heading-right{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 20px;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 10px;
+}
+.all-operations{
+    width: 100%;
+    border-top: 1px solid var(--gray-200);
+    padding: 20px 0;
+}
+.all-operations__item{
+    margin-bottom: 20px;
+}
+.all-operations__item h4{
+    padding-left: 30px;
+}
+ul.all-operations__item-list{
+    display: flex;
+    flex-direction: column;
+}
+ul.all-operations__item-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+    padding: 15px 30px;
+    border-bottom: 1px solid var(--gray-200);
+}
+ul.all-operations__item-list li:hover{
+    background-color: var(--primary-100);
+}
+.all-operations__item-list__name{
+    display: flex;
+    gap: 20px;
+}
+.all-operations__item-list__name time{
+    width: 120px;
+    display: block;
+}
+.textgreen{
+    color: var(--success-500);
+}
 /* Personal Area */
