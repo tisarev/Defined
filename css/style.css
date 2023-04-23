@@ -821,4 +821,7 @@ svg.icon-edit{
 .personal-area__profile-info-list__item-text__content{
     width: calc(100% - 240px);
 }
+.minw150{
+    min-width: 150px;
+}
 /* Personal Area */
