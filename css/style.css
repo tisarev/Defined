@@ -231,18 +231,31 @@ label{
     gap: 5px;
     background-color: var(--white);
 }
+input{
+    height: 40px;
+    border-radius: var(--br);
+    border: 1px solid var(--gray-400);
+    padding: 0 10px;
+    background-color: var(--white);
+}
+input:focus{
+    border-color: var(--primary-700);
+}
 .input-wrapper{
     display: flex;
     flex-direction: column;
     gap: 6px;
 }
-.input-wrapper textarea{
+textarea{
     display: block;
     width: 100%;
     height: 150px;
     padding: 10px 0 0 15px;
-    border-color: var(--gray-400);
-    border-radius: var--(br);
+    border: 1px solid var(--gray-400);
+    border-radius: var(--br);
+}
+textarea:focus{
+    border-color: var(--primary-700);
 }
 .input input{
     width: 100%;
@@ -352,6 +365,17 @@ select:hover{
 select:focus{
     background: url('../img/icon-select__focus.svg') right 10px center no-repeat;
 }
+.popap__buttons{
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid var(--gray-300);
+    display: flex;
+    gap: 10px;
+}
+.popap__buttons button{
+    width: 100%;
+}
+
 /* settings */
 /* Personal Area */
 /* Personal Area-left menu */
@@ -876,5 +900,25 @@ svg.icon-edit{
 .popap__block h4{
     width: 100%;
     text-align: center;
+}
+.popap__content{
+    margin-top: 20px;
+}
+.block-flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    height: 40px;
+    width: 100%;
+    border-radius: var(--br);
+    background-color: var(--gray-100);
+    margin-bottom: 15px;
+}
+.textfrom svg.icon-wallet{
+    stroke: var(--gray-400);
+}
+.block-flex-center .textfrom svg.icon-wallet{
+    stroke: var(--primary-700);
 }
 /* popap */
