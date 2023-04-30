@@ -18,12 +18,21 @@
 </head>
 <body>
     <div class="personal-area">
+      <!--menu-->
         <div class="personal-area__leftblock">
+          <div class="personal-area__leftblock-top__header">
+            <a href="index.html" class="logo">
+                <img src="./img/logo.svg">
+            </a>
+            <div class="burger">
+              <svg class="icon-burger">
+                <use xlink:href="#icon-burger" />
+            </svg>
+            </div>
+          </div>
+          <div class="personal-area__leftblock-top__content">
             <div class="personal-area__leftblock-top">
                 <div class="personal-area__leftblock-top__wrapper">
-                    <a href="index.html" class="logo">
-                        <img src="./img/logo.svg">
-                    </a>
                     <nav class="personal-area__menu">
                         <div class="personal-area__search input">
                             <svg class="icon-search">
@@ -78,7 +87,9 @@
                     </svg>
                 </div>
             </a>
+          </div>
         </div>
+        <!--menu-->
         <!--content-->
         <div class="personal-area__content">
             <div class="personal-area__content__heading  space-between">
@@ -90,6 +101,7 @@
               </select>
             </div>
             <table class="table-link">
+              <thead>
                 <tr class="uppercase">
                   <th>Проект</th>
                   <th>Стоимость часа</th>
@@ -97,20 +109,22 @@
                   <th>Заказчик</th>
                   <th>Статус</th>
                 </tr>
+              </thead>
+              <tbody>
                 <!--tr-->
                 <tr class="status-active__table"> 
-                  <td>
+                  <td data-td="Проект">
                     <a class="link" href="1.2.html">Название проекта 1</a>
                   </td>
-                  <td>1000 ₽</td>
-                  <td>09.12.2022 - 01.03.2023</td>
-                  <td>
+                  <td data-td="Стоимость часа">1000 ₽</td>
+                  <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                  <td data-td="Заказчик">
                     <div class="textfrom">
                         <img src="./img/user.jpg">
                         <span>Марина Ш.</span>
                     </div>
                   </td>
-                  <td>
+                  <td data-td="Статус">
                     <div class="textfrom">
                         <svg class="icon-active">
                             <use xlink:href="#icon-active" />
@@ -121,18 +135,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 2</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td> 
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -143,18 +157,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 3</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -165,18 +179,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 4</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -187,18 +201,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Очень длинное название проекта 5</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -209,18 +223,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 6</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -231,18 +245,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 7</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -253,18 +267,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 8</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -275,18 +289,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 9</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -297,18 +311,18 @@
                 </tr>
                 <!--tr-->
                 <tr>
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 10</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-active">
                               <use xlink:href="#icon-active" />
@@ -319,18 +333,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 11</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -341,18 +355,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 12</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -363,18 +377,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 13</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -385,18 +399,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 14</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -407,18 +421,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 15</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -429,18 +443,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 16</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -451,18 +465,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 17</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -473,18 +487,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 18</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -495,18 +509,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 19</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -517,18 +531,18 @@
                 </tr>
                 <!--tr-->
                 <tr class="status-archive">
-                    <td>
+                    <td data-td="Проект">
                       <a class="link" href="1.2.html">Название проекта 20</a>
                     </td>
-                    <td>1000 ₽</td>
-                    <td>09.12.2022 - 01.03.2023</td>
-                    <td>
+                    <td data-td="Стоимость часа">1000 ₽</td>
+                    <td data-td="Дата от и до">09.12.2022 - 01.03.2023</td>
+                    <td data-td="Заказчик">
                       <div class="textfrom">
                           <img src="./img/user.jpg">
                           <span>Марина Ш.</span>
                       </div>
                     </td>
-                    <td>
+                    <td data-td="Статус">
                       <div class="textfrom">
                           <svg class="icon-archive">
                               <use xlink:href="#icon-archive" />
@@ -537,6 +551,7 @@
                       </div>
                     </td>
                 </tr>
+              </tbody>
               </table>
         </div>
         <!--content-->
@@ -614,6 +629,28 @@
                 </clipPath>
                 </defs>
         </symbol>
+        <symbol id="icon-wallet" viewBox="0 0 20 18"> 
+            <path d="M1 3V15C1 16.1 1.9 17 3 17H17V13M1 3C1 3.53043 1.21071 4.03914 1.58579 4.41421C1.96086 4.78929 2.46957 5 3 5H17V9M1 3C1 1.9 1.9 1 3 1H15V5M15 9C14.4696 9 13.9609 9.21071 13.5858 9.58579C13.2107 9.96086 13 10.4696 13 11C13 12.1 13.9 13 15 13H19V9H15Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-everyone-counts" viewBox="0 0 24 24"> 
+            <path d="M4 22H20C20.5304 22 21.0391 21.7893 21.4142 21.4142C21.7893 21.0391 22 20.5304 22 20V4C22 3.46957 21.7893 2.96086 21.4142 2.58579C21.0391 2.21071 20.5304 2 20 2H8C7.46957 2 6.96086 2.21071 6.58579 2.58579C6.21071 2.96086 6 3.46957 6 4V20C6 20.5304 5.78929 21.0391 5.41421 21.4142C5.03914 21.7893 4.53043 22 4 22ZM4 22C3.46957 22 2.96086 21.7893 2.58579 21.4142C2.21071 21.0391 2 20.5304 2 20V11C2 9.9 2.9 9 4 9H6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M18 14H10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 18H10" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 6H18V10H10V6Z" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-plus" viewBox="0 0 19 19"> 
+            <path d="M9.5 4.25V14.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M4.25 9.5H14.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-burger" viewBox="0 0 24 24"> 
+          <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-burger-close" viewBox="0 0 24 24"> 
+          <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
       </defs>
     </svg>
     <!--sprite-->
@@ -621,5 +658,5 @@
     </script>
 </body>
 </html>
-    
+  
     
