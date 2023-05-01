@@ -17,6 +17,112 @@
     <title>1.9 - Личный кабинет - Финансы</title>
 </head>
 <body>
+    <div class="popap">
+        <div class="popap__block" data-popap="withdraw">
+            <div class="popap__close">&times;</div>
+            <h4>Вывести средства</h4>
+            <div class="popap__content">
+                <div class="block-flex-center">
+                    <span>Итоговый баланс</span>
+                    <div class="textfrom">
+                        <svg class="icon-wallet">
+                            <use xlink:href="#icon-wallet" />
+                        </svg>
+                        <span><b>10000,00</b> ₽</span>
+                    </div>
+                </div>
+                <form class="input-wrapper gap10">
+                    <div class="input-wrapper">
+                        <label for="payment">Сумма платежа</label>
+                        <input type="text" id="payment">
+                    </div>
+                    <div class="input-wrapper">
+                        <label>Выберите счет</label>
+                        <div class="radio-list">
+                            <input type="radio" id="score1" name="score" class="radio-list__item">
+                            <label for="score1">
+                                <b>Альфа Банк</b>
+                                <ul>
+                                    <li>
+                                        <span>БИК:</span> 075423159
+                                    </li>
+                                    <li>
+                                        <span>р/с</span> 12345678987654321597
+                                    </li>
+                                    <li>
+                                        <span>корр. сч.:</span> 12345678987654321597
+                                    </li>
+                                </ul>
+                            </label>
+                        </div>
+                        <div class="radio-list">
+                            <input type="radio" id="score2" name="score" class="radio-list__item">
+                            <label for="score2">
+                                <b>Сбербанк</b>
+                                <ul>
+                                    <li>
+                                        <span>р/с</span> 12345678987654321597
+                                    </li>
+                                    <li>
+                                        <span>БИК:</span> 075423159
+                                    </li>
+                                    <li>
+                                        <span>корр. сч.:</span> 12345678987654321597
+                                    </li>
+                                </ul>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+                <button class="add-account">
+                    <svg class="icon-plus">
+                        <use xlink:href="#icon-plus" />
+                    </svg>       
+                    Добавить новый счет
+                </button>
+            </div>
+            <div class="popap__buttons">
+                <button class="button-primary">Вывести средства</button>
+                <button class="button-secondary">Отменить</button>
+            </div>
+        </div>
+        <div class="popap__block"  data-popap="deleteAccount">
+            <div class="popap__close">&times;</div>
+            <h4>Удалить счет</h4>
+            <div class="popap__content">
+                <h6 class="tacenter">Вы действительно хотите удалить <br>БИК: 075423159 ?</h6>
+                <br>
+            </div>
+            <div class="popap__buttons">
+                <button class="button-primary">Нет</button>
+                <button class="button-secondary">Да</button>
+            </div>
+        </div>
+        <div class="popap__block" data-popap="addBalance">
+            <div class="popap__close">&times;</div>
+            <h4>Пополнить баланс</h4>
+            <div class="popap__content">
+                <form class="input-wrapper gap15">
+                    <div class="input-wrapper">
+                        <label for="payment-method">Способ оплаты</label>
+                        <select id="payment-method">
+                            <option value="value1" selected>Банковские карты</option>
+                            <option value="value2">Значение 2</option>
+                            <option value="value3">Значение 3</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="payment">Сумма платежа</label>
+                        <input type="text" id="payment">
+                    </div>
+                </form>
+            </div>
+            <div class="popap__buttons">
+                <button class="button-primary">Продолжить</button>
+                <button class="button-secondary">Отменить</button>
+            </div>
+        </div>
+    </div>
     <div class="personal-area">
         <!--menu-->
         <div class="personal-area__leftblock">
@@ -27,7 +133,10 @@
               <div class="burger">
                 <svg class="icon-burger">
                   <use xlink:href="#icon-burger" />
-              </svg>
+                </svg>
+                <svg class="icon-burger-close">
+                  <use xlink:href="#icon-burger-close" />
+                </svg>
               </div>
             </div>
             <div class="personal-area__leftblock-top__content">
@@ -100,8 +209,8 @@
                     <option value="value2">Значение 2</option>
                     <option value="value3">Значение 3</option>
                 </select>
-                <button class="button-primary">Пополнить баланс</button>
-                <button class="button-secondary">Вывести</button>
+                <button class="button-primary popap__btn" data-path="addBalance">Пополнить баланс</button>
+                <button class="button-secondary  popap__btn" data-path="withdraw">Вывести</button>
                 <div class="textfrom">
                     <svg class="icon-wallet">
                         <use xlink:href="#icon-wallet" />
@@ -360,8 +469,7 @@
       </defs>
     </svg>
     <!--sprite-->
-    <script>
-    </script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
   

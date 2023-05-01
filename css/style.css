@@ -903,7 +903,7 @@ svg.icon-edit{
 }
 /* Personal Area */
 /* popap */
-.popap{
+.popap{ 
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -911,20 +911,26 @@ svg.icon-edit{
     top: 0;
     background: rgba(0, 0, 0, 0.3);
     z-index: 100;
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     padding: 20px 0;
     backdrop-filter: blur(15px);
+}
+.popap.active{
+    display: flex;
 }
 .popap__block{
     width: 500px;
     padding: 40px 50px 50px;
     border-radius: var(--br);
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     background-color: var(--white);
+}
+.popap__block.active{
+    display: flex;
 }
 .popap__close{
     position: absolute;
@@ -1125,7 +1131,16 @@ svg.icon-burger-close{
         margin-top: 0;
         margin-left: 0;
     }
-    svg.icon-burger{
+    .burger svg.icon-burger{
+        display: block;
+    }
+    .burger.active svg.icon-burger{
+        display: none;
+    }
+    .burger svg.icon-burger-close{
+        display: none;
+    }
+    .burger.active svg.icon-burger-close{
         display: block;
     }
     .personal-area__leftblock-top__header{
@@ -1135,6 +1150,9 @@ svg.icon-burger-close{
     }
     .personal-area__leftblock-top__content{
         display: none;
+    }
+    .personal-area__leftblock-top__content.active{
+        display: block;
     }
     .personal-area{
         overflow: auto;
@@ -1161,6 +1179,9 @@ svg.icon-burger-close{
     }
     .all-operations__item h4 {
         padding-left: 20px;
+    }
+    .personal-area__menu ul li a{
+        border-radius: var(--br);
     }
 }
 @media screen and (max-width: 520px){

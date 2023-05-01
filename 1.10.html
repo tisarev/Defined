@@ -17,8 +17,8 @@
     <title>1.10 - Личный кабинет - Финансы - Вывести средства</title>
 </head>
 <body>
-    <div class="popap">
-        <div class="popap__block">
+    <div class="popap active">
+        <div class="popap__block active" data-popap="withdraw">
             <div class="popap__close">&times;</div>
             <h4>Вывести средства</h4>
             <div class="popap__content">
@@ -86,72 +86,122 @@
                 <button class="button-secondary">Отменить</button>
             </div>
         </div>
+        <div class="popap__block"  data-popap="deleteAccount">
+            <div class="popap__close">&times;</div>
+            <h4>Удалить счет</h4>
+            <div class="popap__content">
+                <h6 class="tacenter">Вы действительно хотите удалить <br>БИК: 075423159 ?</h6>
+                <br>
+            </div>
+            <div class="popap__buttons">
+                <button class="button-primary">Нет</button>
+                <button class="button-secondary">Да</button>
+            </div>
+        </div>
+        <div class="popap__block" data-popap="addBalance">
+            <div class="popap__close">&times;</div>
+            <h4>Пополнить баланс</h4>
+            <div class="popap__content">
+                <form class="input-wrapper gap15">
+                    <div class="input-wrapper">
+                        <label for="payment-method">Способ оплаты</label>
+                        <select id="payment-method">
+                            <option value="value1" selected>Банковские карты</option>
+                            <option value="value2">Значение 2</option>
+                            <option value="value3">Значение 3</option>
+                        </select>
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="payment">Сумма платежа</label>
+                        <input type="text" id="payment">
+                    </div>
+                </form>
+            </div>
+            <div class="popap__buttons">
+                <button class="button-primary">Продолжить</button>
+                <button class="button-secondary">Отменить</button>
+            </div>
+        </div>
     </div>
     <div class="personal-area">
+        <!--menu-->
         <div class="personal-area__leftblock">
-            <div class="personal-area__leftblock-top">
-                <div class="personal-area__leftblock-top__wrapper">
-                    <a href="index.html" class="logo">
-                        <img src="./img/logo.svg">
-                    </a>
-                    <nav class="personal-area__menu">
-                        <div class="personal-area__search input">
-                            <svg class="icon-search">
-                                <use xlink:href="#icon-search" />
-                            </svg>
-                            <input type="text" placeholder="Найти исполнителя">
-                        </div>
-                        <ul>
-                            <li>
-                                <a href="1.1.html">
-                                    <div class="personal-area__menu-text">
-                                        <svg class="icon-requests">
-                                            <use xlink:href="#icon-requests" />
-                                        </svg>
-                                        <span>Запросы</span>
-                                    </div>
-                                    <div class="notification"></div>
-                                </a>
-                            </li >
-                            <li> 
-                                <a href="1.4.html">
-                                    <div class="personal-area__menu-text">
-                                        <svg class="icon-deals">
-                                            <use xlink:href="#icon-deals" />
-                                        </svg>
-                                        <span>Сделки</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="active">
-                                <a href="1.9.html">
-                                    <div class="personal-area__menu-text">
-                                        <svg class="icon-finance">
-                                            <use xlink:href="#icon-finance" />
-                                        </svg>
-                                        <span>Финансы</span>
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
-                </div>
+            <div class="personal-area__leftblock-top__header">
+              <a href="index.html" class="logo">
+                  <img src="./img/logo.svg">
+              </a>
+              <div class="burger">
+                <svg class="icon-burger">
+                  <use xlink:href="#icon-burger" />
+                </svg>
+                <svg class="icon-burger-close">
+                  <use xlink:href="#icon-burger-close" />
+                </svg>
+              </div>
             </div>
-            <a href="1.13.html" class="personal-area__leftblock-bottom">
-                <div class="personal-area__leftblock-bottom__user textfrom">
-                    <img src="./img/user.jpg">
-                    <span>Марина Ш.</span>
-                </div>
-                <div class="button-exit">
-                    <svg class="icon-exit">
-                        <use xlink:href="#icon-exit" />
-                    </svg>
-                </div>
-            </a>
-        </div>
+            <div class="personal-area__leftblock-top__content">
+              <div class="personal-area__leftblock-top">
+                  <div class="personal-area__leftblock-top__wrapper">
+                      <nav class="personal-area__menu">
+                          <div class="personal-area__search input">
+                              <svg class="icon-search">
+                                  <use xlink:href="#icon-search" />
+                              </svg>
+                              <input type="text" placeholder="Найти исполнителя">
+                          </div>
+                          <ul>
+                              <li>
+                                  <a href="1.1.html">
+                                      <div class="personal-area__menu-text">
+                                          <svg class="icon-requests">
+                                              <use xlink:href="#icon-requests" />
+                                          </svg>
+                                          <span>Запросы</span>
+                                      </div>
+                                      <div class="notification"></div>
+                                  </a>
+                              </li >
+                              <li> 
+                                  <a href="1.4.html">
+                                      <div class="personal-area__menu-text">
+                                          <svg class="icon-deals">
+                                              <use xlink:href="#icon-deals" />
+                                          </svg>
+                                          <span>Сделки</span>
+                                      </div>
+                                  </a>
+                              </li>
+                              <li class="active">
+                                  <a href="1.9.html">
+                                      <div class="personal-area__menu-text">
+                                          <svg class="icon-finance">
+                                              <use xlink:href="#icon-finance" />
+                                          </svg>
+                                          <span>Финансы</span>
+                                      </div>
+                                  </a>
+                              </li>
+                          </ul>
+                      </nav>
+                  </div>
+              </div>
+              <a href="1.13.html" class="personal-area__leftblock-bottom">
+                  <div class="personal-area__leftblock-bottom__user textfrom">
+                      <img src="./img/user.jpg">
+                      <span>Марина Ш.</span>
+                  </div>
+                  <div class="button-exit">
+                      <svg class="icon-exit">
+                          <use xlink:href="#icon-exit" />
+                      </svg>
+                  </div>
+              </a>
+            </div>
+          </div>
+          <!--menu-->
         <!--content-->
         <div class="personal-area__content">
-            <div class="personal-area__content__heading space-between">
+            <div class="personal-area__content__heading space-between space-between-column">
               <h1>Финансы</h1>
               <div class="personal-area__content__heading-right">
                 <select>
@@ -159,8 +209,8 @@
                     <option value="value2">Значение 2</option>
                     <option value="value3">Значение 3</option>
                 </select>
-                <button class="button-primary">Пополнить баланс</button>
-                <button class="button-secondary">Вывести</button>
+                <button class="button-primary popap__btn" data-path="addBalance">Пополнить баланс</button>
+                <button class="button-secondary  popap__btn" data-path="withdraw">Вывести</button>
                 <div class="textfrom">
                     <svg class="icon-wallet">
                         <use xlink:href="#icon-wallet" />
@@ -407,11 +457,19 @@
             <path d="M9.5 4.25V14.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M4.25 9.5H14.75" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </symbol>
+        <symbol id="icon-burger" viewBox="0 0 24 24"> 
+          <path d="M3 6H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 12H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M3 18H21" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
+        <symbol id="icon-burger-close" viewBox="0 0 24 24"> 
+          <path d="M18 6L6 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M6 6L18 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </symbol>
       </defs>
     </svg>
     <!--sprite-->
-    <script>
-    </script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
     

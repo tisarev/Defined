@@ -17,6 +17,22 @@
     <title>1.2 - Личный кабинет - Запросы-раскрытая</title>
 </head>
 <body>
+    <div class="popap">
+        <div class="popap__block" data-popap="answer">
+            <div class="popap__close">&times;</div>
+            <h4>Ответить</h4>
+            <div class="popap__content">
+                <div class="input-wrapper">
+                    <label for="textarea__block">Опишите ваш вопрос</label>
+                    <textarea name="" id="textarea__block" cols="30" rows="10"></textarea>
+                </div>
+            </div>
+            <div class="popap__buttons">
+                <button class="button-primary">Отправить</button>
+                <button class="button-secondary">Отменить</button>
+            </div>
+        </div>
+    </div>
     <div class="personal-area">
         <!--menu-->
         <div class="personal-area__leftblock">
@@ -27,7 +43,10 @@
               <div class="burger">
                 <svg class="icon-burger">
                   <use xlink:href="#icon-burger" />
-              </svg>
+                </svg>
+                <svg class="icon-burger-close">
+                  <use xlink:href="#icon-burger-close" />
+                </svg>
               </div>
             </div>
             <div class="personal-area__leftblock-top__content">
@@ -181,7 +200,7 @@
                             </div>
                         </div>
                         <div class="question-answer__item-button">
-                            <a href="" class="button-primary">Ответить</a>
+                            <button class="button-primary popap__btn" data-path="answer">Ответить</button>
                         </div>
                     </div>
                 </div>
@@ -265,8 +284,7 @@
       </defs>
     </svg>
     <!--sprite-->
-    <script>
-    </script>
+    <script type="text/javascript" src="./js/script.js"></script>
 </body>
 </html>
   
