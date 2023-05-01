@@ -1035,6 +1035,21 @@ svg.icon-burger-close{
 .aicenter{
     align-items: center;
 }
+svg.icon-check-green{
+    fill: transparent;
+    width: 18px;
+    height: 18px;
+}
+svg.icon-table-arrow{
+    width: 34px;
+    height: 34px;
+    fill: transparent;
+    stroke: var(--primary-700);
+    cursor: pointer;
+}
+svg.icon-table-arrow:hover{
+    stroke: var(--secondary-700);
+}
 @media screen and (max-width: 1140px){
     :root{
         --font-size: 14px;
