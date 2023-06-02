@@ -14,7 +14,7 @@
 
     </style>
 
-    <title>1.7 - Личный кабинет - Сделки-Платежи</title>
+    <title>1.17 - Личный кабинет - Финансы-Выберите счет</title>
 </head>
 <body>
     <div class="personal-area">
@@ -55,7 +55,7 @@
                                       <div class="notification"></div>
                                   </a>
                               </li >
-                              <li class="active"> 
+                              <li> 
                                   <a href="1.4.html">
                                       <div class="personal-area__menu-text">
                                           <svg class="icon-deals">
@@ -65,7 +65,7 @@
                                       </div>
                                   </a>
                               </li>
-                              <li>
+                              <li class="active">
                                   <a href="1.9.html">
                                       <div class="personal-area__menu-text">
                                           <svg class="icon-finance">
@@ -95,195 +95,94 @@
           <!--menu-->
         <!--content-->
         <div class="personal-area__content">
-            <div class="personal-area__content__heading">
-              <ul class="bread-crumbs">
-                <li>
-                  <a href="1.4.html">
-                    Сделки
-                  </a>
-                </li>
-                <li>
-                  <a href="">
-                    Название проекта 1
-                  </a>
-                </li>
-              </ul>
-              <h1>Название сделки</h1>
+            <div class="personal-area__content__heading space-between space-between-column">
+              <h1>Финансы</h1>
+              <div class="personal-area__content__heading-right">
+                <select>
+                    <option value="value1" selected>Все время</option>
+                    <option value="value2">Значение 2</option>
+                    <option value="value3">Значение 3</option>
+                </select>
+                <button class="button-primary popap__btn" data-path="addBalance">Пополнить баланс</button>
+                <button class="button-secondary  popap__btn" data-path="withdraw">Вывести</button>
+                <div class="textfrom">
+                    <svg class="icon-wallet">
+                        <use xlink:href="#icon-wallet" />
+                    </svg>
+                    <span><b>10000,00</b> ₽</span>
+                </div>
+                <a href="1.18.html" class="active">
+                    <svg class="icon-everyone-counts">
+                        <use xlink:href="#icon-everyone-counts" />
+                    </svg>
+                </a>
+              </div>
             </div>
-            <div class="personal-area__wrapper-tabs">
-                <ul class="list-tabs">
-                    <li>
-                        <a href="1.6.html">Общая информация</a>
-                    </li>
-                    <li class="active">
-                        <a href="1.7.html">Платежи</a>
-                    </li>
-                    <li>
-                        <a href="1.8.html">Отчеты</a>
-                    </li>
-                </ul>
+            <div class="personal-area__content__text">
+                <h5>Выберите счет</h5>
+                <div class="popap__content counting-flex">
+                    <form class="input-wrapper gap10">
+                        <div class="input-wrapper">
+                            <div class="radio-list">
+                                <input type="radio" id="score1" name="score" class="radio-list__item">
+                                <label for="score1">
+                                    <b>Альфа Банк</b>
+                                    <ul>
+                                        <li>
+                                            <span>БИК:</span> 075423159
+                                        </li>
+                                        <li>
+                                            <span>р/с</span> 12345678987654321597
+                                        </li>
+                                        <li>
+                                            <span>корр. сч.:</span> 12345678987654321597
+                                        </li>
+                                    </ul>
+                                </label>
+                            </div>
+                            <div class="radio-list">
+                                <input type="radio" id="score2" name="score" class="radio-list__item">
+                                <label for="score2">
+                                    <b>Сбербанк</b>
+                                    <ul>
+                                        <li>
+                                            <span>р/с</span> 12345678987654321597
+                                        </li>
+                                        <li>
+                                            <span>БИК:</span> 075423159
+                                        </li>
+                                        <li>
+                                            <span>корр. сч.:</span> 12345678987654321597
+                                        </li>
+                                    </ul>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="list-inputs-tab">
+                        <h5>Добавить новый счет</h5>
+                        <form>
+                            <div class="input-wrapper">
+                                <label for="BIC">БИК банка</label>
+                                <input type="text" id="BIC" placeholder="Введите">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="Bank-name">Название банка</label>
+                                <input type="text" id="Bank-name" placeholder="Введите название, БИК или ИНН">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="Core-account">Кор счет</label>
+                                <input type="text" id="Core-account">
+                            </div>
+                            <div class="input-wrapper">
+                                <label for="Checking-account">Расчётный счет</label>
+                                <input type="text" id="Checking-account">
+                            </div>
+                            <button class="button-primary mt10 w100">Добавить</button>
+                        </form>
+                    </div>
+                </div>
             </div>
-            <table class="table-link">
-                <thead>
-                    <tr class="uppercase">
-                        <th>Месяц</th>
-                        <th>Часов</th>
-                        <th>Задач</th>
-                        <th>Оплачено</th>
-                        <th>Итоговая</th>
-                        <th colspan="2">Статус</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Январь 2023</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-in-processing">
-                                    <use xlink:href="#icon-in-processing" />
-                                </svg>
-                                <span>В обработке</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                            <a href="" class="button-secondary">Оплатить</a>
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Декабрь 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-overdue">
-                                    <use xlink:href="#icon-overdue" />
-                                </svg>
-                                <span>Просрочено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                            <a href="" class="button-secondary">Оплатить</a>
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Ноябрь 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-overdue">
-                                    <use xlink:href="#icon-overdue" />
-                                </svg>
-                                <span>Просрочено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                            <a href="" class="button-secondary">Оплатить</a>
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Октябрь 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-active">
-                                    <use xlink:href="#icon-active" />
-                                </svg>
-                                <span>Оплачено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Сентябрь 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-active">
-                                    <use xlink:href="#icon-active" />
-                                </svg>
-                                <span>Оплачено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Август 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-active">
-                                    <use xlink:href="#icon-active" />
-                                </svg>
-                                <span>Оплачено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Июль 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-active">
-                                    <use xlink:href="#icon-active" />
-                                </svg>
-                                <span>Оплачено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                        </td>
-                    </tr>
-                    <!--tr-->
-                    <tr class="status-active__table"> 
-                        <td data-td="Месяц"><b>Июнь 2022</b></td>
-                        <td data-td="Часов">22.5</td>
-                        <td data-td="Задач">45</td>
-                        <td data-td="Оплачено">5000 ₽</td>
-                        <td data-td="Итоговая"><b>10125</b> ₽</td>
-                        <td data-td="Статус">
-                            <div class="textfrom">
-                                <svg class="icon-active">
-                                    <use xlink:href="#icon-active" />
-                                </svg>
-                                <span>Оплачено</span>
-                            </div>
-                        </td>
-                        <td data-td="" style="width:150px">
-                        </td>
-                    </tr>
-                </tbody>
-              </table>
         </div>
         <!--content-->
     </div>
@@ -389,5 +288,4 @@
 </body>
 </html>
   
-    
     

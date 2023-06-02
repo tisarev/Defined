@@ -14,11 +14,11 @@
 
     </style>
 
-    <title>1.11 - Личный кабинет - Финансы - Удалить счет</title>
+    <title>1.19 - Личный кабинет - Финансы-Добавить новый счет - модалка</title>
 </head>
 <body>
     <div class="popap active">
-        <div class="popap__block" data-popap="withdraw">
+        <div class="popap__block active" data-popap="withdraw">
             <div class="popap__close">&times;</div>
             <h4>Вывести средства</h4>
             <div class="popap__content">
@@ -74,19 +74,34 @@
                         </div>
                     </div>
                 </form>
-                <button class="add-account">
-                    <svg class="icon-plus">
-                        <use xlink:href="#icon-plus" />
-                    </svg>       
-                    Добавить новый счет
-                </button>
+                <div class="list-inputs-tab mt10">
+                    <h5>Добавить новый счет</h5>
+                    <form>
+                        <div class="input-wrapper">
+                            <label for="BIC">БИК банка</label>
+                            <input type="text" id="BIC" placeholder="Введите">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="Bank-name">Название банка</label>
+                            <input type="text" id="Bank-name" placeholder="Введите название, БИК или ИНН">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="Core-account">Кор счет</label>
+                            <input type="text" id="Core-account">
+                        </div>
+                        <div class="input-wrapper">
+                            <label for="Checking-account">Расчётный счет</label>
+                            <input type="text" id="Checking-account">
+                        </div>
+                    </form>
+                </div>
             </div>
             <div class="popap__buttons">
                 <button class="button-primary">Вывести средства</button>
                 <button class="button-secondary">Отменить</button>
             </div>
         </div>
-        <div class="popap__block active"  data-popap="deleteAccount">
+        <div class="popap__block"  data-popap="deleteAccount">
             <div class="popap__close">&times;</div>
             <h4>Удалить счет</h4>
             <div class="popap__content">
